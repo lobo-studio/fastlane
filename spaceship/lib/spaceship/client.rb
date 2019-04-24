@@ -475,7 +475,7 @@ module Spaceship
           req.headers['X-Requested-With'] = 'XMLHttpRequest'
           req.headers['X-Apple-Widget-Key'] = self.itc_service_key
           req.headers['Accept'] = 'application/json, text/javascript'
-          req.headers["Cookie"] = modified_cookie if modified_cookie
+          #req.headers["Cookie"] = modified_cookie if modified_cookie
         end
       rescue UnauthorizedAccessError
         raise InvalidUserCredentialsError.new, "Invalid username and password combination. Used '#{user}' as the username."
